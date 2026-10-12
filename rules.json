@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "referer",
+          "operation": "set",
+          "value": "https://www.instagram.com/"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||cdninstagram.com/",
+      "resourceTypes": ["xmlhttprequest", "image", "media", "other"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "referer",
+          "operation": "set",
+          "value": "https://www.instagram.com/"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||fbcdn.net/",
+      "resourceTypes": ["xmlhttprequest", "image", "media", "other"]
+    }
+  }
+]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instagram Image Downloader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <img src="icons/icon32.png" width="28" height="28" alt="" />
+        <div class="titles">
+          <h1>Instagram images</h1>
+          <p id="subtitle">From the page you’re viewing</p>
+        </div>
+      </div>
+      <button id="rescan" type="button">Rescan</button>
+    </header>
+
+    <div id="toolbar" class="toolbar" hidden>
+      <label class="select-all">
+        <input id="select-all" type="checkbox" />
+        <span>Select all</span>
+      </label>
+      <p id="count" class="count"></p>
+    </div>
+
+    <div id="panel" class="panel" aria-live="polite"></div>
+
+    <footer class="bar">
+      <p id="status" class="status" role="status"></p>
+      <div class="actions">
+        <button id="download-selected" type="button" class="ghost" disabled>Download selected</button>
+        <button id="download-all" type="button" class="primary" disabled>Download all</button>
+      </div>
+      <p class="fine">Photos already loaded on this page. Swipe a carousel, then rescan, to add the rest.</p>
+    </footer>
+
+    <script src="lib/urls.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
